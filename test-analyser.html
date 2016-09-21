@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style></style>
+</head>
+<body>
+<h1>Analyser</h1>
+<div>
+	<button onclick="Play()">Play</button>
+	<button onclick="Stop()">Stop</button><br/>
+</div>
+
+<table>
+<tr>
+	<td>频域/时域 : </td>
+	<td>
+		<select id="mode" onchange="Setup()">
+			<option>Frequency</option>
+			<option>TimeDomain</option>
+		</select>
+	</td>
+</tr>
+
+<tr>
+	<td>滤波时间常数 : </td>
+	<td>
+		<input type="text" id="smoothing" value="0.9" onchange="Setup()"/>
+	</td>
+</tr>
+
+<tr>
+	<td>WAV文件选择 : </td>
+	<td>
+	<select id="fileMode" onchange="FileChange()">
+	
+		<option>only1000hz</option>
+		<option>3Ktime</option>
+		<option>n24Ktime</option>
+		<option>n23Ktime</option>
+		<option>n13Ktime</option>
+		<option>24Ktime</option>
+		
+	</select>
+	</td>
+</tr>
+
+<tr>
+	<td>窗长选择 : </td>
+	<td>
+		<select id="fftSizeMode" onchange="Setup()">
+			<option>512</option>
+			<option>1024</option>
+			<option>2048</option>
+		</select>
+	</td>
+</tr>
+
+<tr>
+	<td>最小分贝 : </td>
+	<td><input type="text" id="min" onchange="Setup()"/></td>
+</tr>
+
+<tr>
+	<td>最大分贝 : </td>
+	<td><input type="text" id="max" onchange="Setup()"/></td>
+</tr>
+
+</table>
+
+<br/><br/>
+
+<canvas id="graph" width=256 height=256></canvas>
+
+<hr/>
+<script type="text/javascript" src="waapisim.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
