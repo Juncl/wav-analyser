@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	
+	font-family: Garamond, sans-serif;
+	
+}
+
+h1 { font-size: 4.0em;}
+p, li { font-size: 1.8em; }
+
+.clear { clear: both; }
+
+#header {
+	padding: 15px 0 15px 15px;
+	margin: 0 auto;
+}
+
+#content {
+	padding: 15px 30px 0 0;
+	}
+	#main-content {
+		margin-left: 300px;
+		max-width: 600px;
+	}
+
+#sidebar {
+	width: 250px;
+	height: 800px;
+	float: left;
+	background-color: #ccccff;
+	padding: 0 0 0 15px;
+	}
+	#sidebar ul {
+		list-style: none;
+	}
+	#sidebar ul li{
+		margin: 20px 10px;
+	}
+	#sidebar ul li a{
+		text-decoration: none;
+	}
