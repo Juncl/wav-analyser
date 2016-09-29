@@ -8,25 +8,26 @@
 <body>
 
 <div id="header">
-		<h1>Analyser</h1>
+		<h1 align="center" >Analyser</h1>
 </div>
 
 <div id="content">
 		<div id="sidebar">
 			<ul>
 				<li> <a href="./test-analyser.html">首页</a></li>
-				<li> <a href="./spectrum.html">频谱分析</a> </li>
+				<li> <a href="./spectrum.html">定位仿真</a> </li>
 				<li> <a href="./time.html">时域分析</a></li>
 			</ul>
 		</div>
 		
 		<div id="main-content">
-			<div id="btn">
-				<button id="btn1" onclick="Play()">Play</button>
-				<button id="btn2" onclick="Stop()">Stop</button><br/>
-			</div>
+			<div id="main">
+				<div id="btn">
+					<button id="btn1" onclick="Play()">Play</button>
+					<button id="btn2" onclick="Stop()">Stop</button><br/>
+				</div>
 
-			<table>
+				<table cellspacing="10" id="table">
 				<tr>
 					<td>频域/时域 : </td>
 					<td>
@@ -49,12 +50,13 @@
 					<td>
 						<select id="fileMode" onchange="FileChange()">
 	
-						<option>only1000hz</option>
-						<option>3Ktime</option>
-						<option>n24Ktime</option>
-						<option>n23Ktime</option>
-						<option>n13Ktime</option>
-						<option>24Ktime</option>
+						<option>4K0s_10s_10K</option>
+						<option>1K0s_10s_10K</option>
+						<option>1K0s_3K8s_10s_7K</option>
+						<option>1K0s_3K8s_10s_8K</option>
+						<option>1K0s_2K5s_4K8s_10s_10K</option>
+						<option>1K0s_2K5s_4K8s_10s_12K</option>
+						
 		
 						</select>
 					</td>
@@ -80,16 +82,28 @@
 					<td>最大分贝 : </td>
 					<td><input type="text" id="max" onchange="Setup()"/></td>
 				</tr>
-
-
-
-			</table>
-
-			<br/><br/>
+				</table>
+				<div class="clear"></div>
+			</div>
 
 			<canvas id="graph" width=256 height=256></canvas>
 
-			<hr/>
+			<div id="display">
+				<ul >
+					<li id="pos1Value">信号0 (0 ,0)</li>
+					<li id="pos2Value"></li>
+					<li id="pos3Value"></li>
+				</ul>
+				
+			</div>
+
+			<div id="timeDisplay">
+				<ul>
+					<li id="time1">信号1 0</li>
+					<li id="time2"></li>
+					<li id="time3"></li>
+				</ul>
+			</div>
 
 		</div>
 		

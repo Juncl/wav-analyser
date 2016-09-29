@@ -9,7 +9,7 @@ body {
 	
 }
 
-h1 { font-size: 4.0em;}
+h1 { font-size: 4.0em; }
 p, li { font-size: 1.8em; }
 
 .clear { clear: both; }
@@ -17,6 +17,7 @@ p, li { font-size: 1.8em; }
 #header {
 	padding: 15px 0 15px 15px;
 	margin: 0 auto;
+	background-color: #ccccff;
 }
 
 #content {
@@ -24,8 +25,43 @@ p, li { font-size: 1.8em; }
 	}
 	#main-content {
 		margin-left: 300px;
-		max-width: 600px;
-	}
+		width: auto;
+		
+		}
+		#main{
+				float: left;
+			}
+			#btn1, #btn2{
+				width: 100px;
+				height: 40px;
+				background: #b3e4ff;
+				margin: 20px 20px;
+				font-size: 150%;
+				border-radius: 5px;
+			}
+			#table{
+				background: #ffcc66
+			}
+		#graph{
+			float: right;
+			margin-right: 50px;
+			margin-top: 40px;
+		}
+		#display{
+			margin-left: 360px;
+			padding: 10px;
+			}
+			#display ul {
+				list-style: none;
+			}
+
+		#timeDisplay{
+			margin-left: 360px;
+			padding: 10px;
+			}
+			#timeDisplay ul {
+				list-style: none;
+			} 
 
 #sidebar {
 	width: 250px;
